@@ -1,4 +1,5 @@
 # Create a Class Quarterback to calculate the Quarterback Rating.
+
 class Quarterback():
     # Initializing the class
     def __init__ (self,a,c,y,t,i):
@@ -34,6 +35,7 @@ def gross_yards(y,c):
         y = float(input("Enter the number of gross yards passing : "))
 
 # main
+
 a = float(input("Enter the number of passes attempted : "))
 c = float(input("Enter the number of passes completed : "))
 att_comp(a,c)
