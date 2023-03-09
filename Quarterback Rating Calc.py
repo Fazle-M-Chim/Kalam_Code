@@ -1,8 +1,8 @@
 # Create a Class Quarterback to calculate the Quarterback Rating.
 
-class Quarterback():
+class Quarterback:
     # Initializing the class
-    def __init__ (self,a,c,y,t,i):
+    def __init__ (self, a, c, y, t, i):
         self.att = a
         self.com = c
         self.yd = y
@@ -16,7 +16,7 @@ class Quarterback():
     def print_QBR (self):
         print("The Quarterback Rating is {:.1f}".format(self.calc_QBR()))
 
-def att_comp (a,c):
+def att_comp (a, c):
     while c > a:
         print("The number of passes completed cannot be greater than the1 number of passes attempted")
         a = float(input("Enter the number of passes attempted : "))
@@ -24,12 +24,12 @@ def att_comp (a,c):
     while a <= 0:
         print("The value of passes attempted is incorrect")
         a = float(input("Enter the number of passes attempted : "))
-def comp_td (c,t):
+def comp_td (c, t):
     while t > c:
         print("The number of touchdowns cannot be greater than the number of passes completed")
         c = float(input("Enter the number of passes completed : "))
         t = float(input("Enter the number of touchdowns thrown : "))
-def gross_yards(y,c):
+def gross_yards(y, c):
     while y > 99 * c or y < -20 * c:
         print("The number of yards passing is incorrect.")
         y = float(input("Enter the number of gross yards passing : "))
