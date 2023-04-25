@@ -1,0 +1,30 @@
+# Code by Fazlemalak Chimthanawala
+'''
+Write a recursive function to compute the nth term of the sequence defined by the recursive relation 
+an = an-1 + an-2 + an-3, where a0 = 1, a1 = 1, and a2 = 1, and n = 3, 4, 5, ... .  
+Then, identify what happens to the ratio an/an-1 as n gets larger.  
+'''
+
+def sequence(n):
+    if n == 0 or n == 1 or n == 2:
+        return 1
+    else:
+        return sequence(n - 1) + sequence(n - 2) + sequence(n - 3)
+
+def main():
+    num_terms = 26
+    ratios = []
+
+    for n in range(3, num_terms):
+        An = sequence(n)
+        An_1 = sequence(n - 1)
+        ratio = An / An_1
+        ratios.append(ratio)
+        print("n:", n, "Ratio:", ratio)
+
+    avg_ratio = sum(ratios) / len(ratios)
+    print("Average Ratio is",format(avg_ratio,".2f"))
+    print("As we run the program for longer, we would get an average ratio around 1.83")
+
+
+main()
