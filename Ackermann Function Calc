@@ -1,0 +1,24 @@
+# Code by Fazlemalak Chimthanawala
+'''
+Ackermann’s function is a recursive mathematical algorithm that can be used to test how well a computer preforms recursion.  Write a function A(m,n) which solves Ackermann’s Function.  Use the following logic in your function:
+•	If m = 0 then return n+1
+•	If n = 0 then return A(m-1, 1)
+•	Otherwise, return A(m-1, A(m, n-1))
+
+Test your function in a program that displays the following values: A(0, 0), A(0,1), A(1,1), A(1,2), A(1,4), A(2,2), A(3,2).  (10 points)
+'''
+def A(m, n):
+    if m == 0:
+        return n + 1
+    elif n == 0:
+        return A(m - 1, 1)
+    else:
+        return A(m - 1, A(m, n - 1))
+
+
+# main
+test_cases = [(0, 0), (0, 1), (1, 1), (1, 2), (1, 4), (2, 2), (3, 2),]
+
+for m, n in test_cases:
+    result = A(m, n)
+    print("A(", m, ",", n, ") = ", result, sep="")
